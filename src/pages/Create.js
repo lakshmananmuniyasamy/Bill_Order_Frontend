@@ -97,7 +97,7 @@ const Create = () => {
         const promises = rows.map(async (row) => {
             if (row.productName && row.quantity && row.price) {
                 try {
-                    const response = await axios.post(`http://localhost:8080/api/products`, {
+                    const response = await axios.post(`https://bill-order-backend-1.vercel.app/api/products`, {
                         id: orderId, 
                         productName: row.productName,
                         quantity: row.quantity,

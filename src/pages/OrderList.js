@@ -13,7 +13,7 @@ const OrderList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/api/products/${id}`);
+                const response = await axios.get(`https://bill-order-backend-1.vercel.app/api/products/${id}`);
                 setRows(response.data);
                 console.log("data", response.data)
             } catch (error) {

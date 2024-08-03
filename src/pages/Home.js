@@ -16,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/products/get');
+                const response = await axios.get('https://bill-order-backend-1.vercel.app/api/products/get');
                 setRows(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -29,7 +29,7 @@ const Home = () => {
     const handleDelete = async (id) => {
         if (window.confirm('Are you sure you want to delete this product?')) {
             try {
-                await axios.delete(`http://localhost:8080/api/products/${id}`);
+                await axios.delete(`https://bill-order-backend-1.vercel.app/api/products/${id}`);
                 const updatedRows = rows.filter(row => row.id !== id);
                 setRows(updatedRows);
                 toast.success(`Product with ID ${id} deleted successfully!`);
