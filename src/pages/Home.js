@@ -16,7 +16,7 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/products');
+                const response = await axios.get('http://localhost:8080/api/products/get');
                 setRows(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
