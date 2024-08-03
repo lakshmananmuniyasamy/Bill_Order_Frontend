@@ -12,6 +12,7 @@ const Home = () => {
     const [sortBy, setSortBy] = useState('grandTotal'); 
     const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
+    axios.defaults.withCredentials = true;
 
     useEffect(() => {
         const fetchData = async () => {
