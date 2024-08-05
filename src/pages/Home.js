@@ -17,7 +17,7 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://bill-order-backend-1.vercel.app/api/products/get');
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/get`);
                 setRows(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
